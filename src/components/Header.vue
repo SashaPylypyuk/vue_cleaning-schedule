@@ -9,8 +9,8 @@
     <router-link to="/addACleaner" class="header__item">
       Додати прибиральника
     </router-link>
-    <form @submit="clearLocalStorage">
-    <button type="submit" class="header__item">
+    <form @submit.stop.prevent="clearLocalStorage">
+    <button type="submit" class="header__item header__item--button">
       Очистити localStorage
     </button>
     </form>
@@ -30,24 +30,31 @@ export default {
 </script>
 
 <style lang="scss">
-  .header {
-    padding: 30px 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #EFB27B;
+.header {
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #E9C46A;
 
-    &__item {
+  &__item {
+    border: 2px solid #E9C46A;
     margin-bottom: 10px;
-    border: 2px solid #6FA9BB;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
-    background-color: #fff;
     padding: 10px;
-    color: #000;
+    color: #264653;
     font-family: sans-serif;
     font-size: 24px;
     text-decoration: none;
+
+    &:hover {
+      border: 2px solid #264653;
+    }
+
+    &--button {
+      background-color: #E9C46A;
     }
   }
+}
 </style>

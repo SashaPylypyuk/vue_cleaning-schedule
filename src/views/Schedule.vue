@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="schedule">
     <h2 class="schedule__text--title">
       Графік прибирання
     </h2>
@@ -39,16 +39,19 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.schedule__text--title {
+
+.schedule {
+  &__text--title {
     text-align: center;
     width: 400px;
-    margin: 20px auto;
-  };
+    margin: 50px auto;
+    font-size: 30px;
+    color: #264653;
+  }
+}
 
 .table {
-  border: 1px solid #6FA9BB;
-  border-radius: 10px;
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
   font-family: sans-serif;
 
@@ -61,10 +64,10 @@ export default {
   &__row {
     &--head {
     font-size: 25px;
-    background-color: #EFB27B;
+    background-color: #F4A261;
     }
     &--cleaned {
-      background-color: #96E7FF;
+      background-color: #44FCE7;
     }
   }
 }

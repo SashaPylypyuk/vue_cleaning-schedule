@@ -1,17 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import AddACleaner from '@/views/AddACleaner'
 import Cleaners from '@/views/Cleaners'
 import Cleaner from '@/views/Cleaner'
+import Schedule from '@/views/Schedule'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Schedule',
+    component: Schedule
   },
   {
     path: '/addACleaner',
