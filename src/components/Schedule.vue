@@ -15,7 +15,7 @@
           Чи прибранно
         </th>
       </tr>
-      <tr v-for="hour in allHours" :key="hour" class="table__row" :class="{'table__row--cleaned': hour.isCleaned}">
+      <tr v-for="hour in allHours" :key="hour.time" class="table__row" :class="{'table__row--cleaned': hour.isCleaned}">
         <th class="table__cell">
           {{ hour.whoClean }}
         </th>

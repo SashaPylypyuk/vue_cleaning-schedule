@@ -23,6 +23,7 @@ export default {
     clearLocalStorage () {
       localStorage.hours = []
       localStorage.cleaners = []
+      this.$router.go()
     }
   }
 }

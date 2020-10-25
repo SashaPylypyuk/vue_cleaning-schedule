@@ -20,7 +20,7 @@ export default {
         }
       }
       localStorage.hours = JSON.stringify(state.hours)
-      const cleanersId = state.cleaners.length === 0 ? 1 : state.cleaners.length
+      const cleanersId = state.cleaners.length
       state.cleaners.push({ id: cleanersId, name: cleaner, clean: hours })
       localStorage.cleaners = JSON.stringify(state.cleaners)
     }
@@ -75,15 +75,17 @@ export default {
       return state.hours
     },
     avalibleHours (state) {
-      // eslint-disable-next-line spaced-comment
-      //const date = new Date()
-      // eslint-disable-next-line spaced-comment
-      //const now = `${date.getHours()}.${date.getMinutes()}`
+      const date = new Date()
+      const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes()
+      const now = `${date.getHours()}.${minutes}`
       return state.hours.filter(hour => hour.whoClean === '')
-        .filter(hour => Number.parseFloat(hour.time) < 24)
+        .filter(hour => Number.parseFloat(hour.time) < Number.parseFloat(now))
     },
     allCleaners (state) {
       return state.cleaners
+    },
+    cleanerById: (state) => id => {
+      return state.cleaners.filter(cleaner => cleaner.id === id)
     }
   }
 }

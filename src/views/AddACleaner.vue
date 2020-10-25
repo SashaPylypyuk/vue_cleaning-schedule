@@ -10,7 +10,7 @@
           Введіть ім*я
           <input type="text" v-model.trim="name" class="form__item form__item--text">
         </label>
-        <button type="button" @click="addACleaner" class="form__item form__item--button">
+        <button type="submit" @click="addACleaner" class="form__item form__item--button">
           Добавити прибиральника
         </button>
       </div>
@@ -44,8 +44,12 @@ export default {
     ...mapMutations(['updateCleaners']),
     addACleaner () {
       if (this.name !== '') {
-        console.log(this.checkedItems)
-        this.updateCleaners({ cleaner: this.name, hours: this.checkedItems })
+        if (this.checkedItems.length > 0) {
+          console.log(this.checkedItems.length)
+          this.updateCleaners({ cleaner: this.name, hours: this.checkedItems })
+          this.name = ''
+          this.checkedItems = []
+        }
       }
     }
   },
