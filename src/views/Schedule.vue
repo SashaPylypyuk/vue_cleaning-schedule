@@ -17,6 +17,9 @@
       </tr>
       <tr v-for="hour in allHours" :key="hour.time" class="table__row" :class="{'table__row--cleaned': hour.isCleaned}">
         <th class="table__cell">
+          <p v-if="!hour.whoClean">
+            Поки ніхто
+          </p>
           {{ hour.whoClean }}
         </th>
         <th class="table__cell">
@@ -51,13 +54,13 @@ export default {
 }
 
 .table {
-  width: 800px;
+  border-spacing: 0;
+  width: 750px;
   margin: 0 auto;
   font-family: sans-serif;
 
   &__cell {
     font-size: 20px;
-    border: 1px solid #2c2c2c;
     padding: 20px 5px;
   }
 
@@ -66,6 +69,12 @@ export default {
     font-size: 25px;
     color: #fff;
     background-color: #2c2c2c;
+    :first-child {
+      border-top-left-radius: 20px;
+    }
+    :last-child {
+      border-top-right-radius: 20px;
+    }
     }
     &--cleaned {
       background-color: rgba($color: #2060f6, $alpha: .5);

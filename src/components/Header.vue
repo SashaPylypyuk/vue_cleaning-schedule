@@ -38,6 +38,7 @@ export default {
   background-color: #2c2c2c;
 
   &__item {
+    outline: none;
     border: 2px solid #2c2c2c;
     margin-bottom: 10px;
     border-radius: 20px;
@@ -51,7 +52,7 @@ export default {
 
     &:hover {
       color: #2060f6;
-      border: 2px solid #fff;
+      border: 2px solid #2060f6;
     }
 
     &--button {
