@@ -35,25 +35,27 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #E9C46A;
+  background-color: #2c2c2c;
 
   &__item {
-    border: 2px solid #E9C46A;
+    border: 2px solid #2c2c2c;
     margin-bottom: 10px;
     border-radius: 20px;
     cursor: pointer;
+    color: #fff;
     padding: 10px;
-    color: #264653;
-    font-family: sans-serif;
     font-size: 24px;
     text-decoration: none;
+    transition: color .5s ease;
+    transition: border .5s ease;
 
     &:hover {
-      border: 2px solid #264653;
+      color: #2060f6;
+      border: 2px solid #fff;
     }
 
     &--button {
-      background-color: #E9C46A;
+      background-color: #2c2c2c;
     }
   }
 }

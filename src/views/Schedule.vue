@@ -46,28 +46,29 @@ export default {
     width: 400px;
     margin: 50px auto;
     font-size: 30px;
-    color: #264653;
+    color: #2c2c2c;
   }
 }
 
 .table {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
   font-family: sans-serif;
 
   &__cell {
     font-size: 20px;
-    border: 1px solid #2E2526;
-    padding: 10px 5px;
+    border: 1px solid #2c2c2c;
+    padding: 20px 5px;
   }
 
   &__row {
     &--head {
     font-size: 25px;
-    background-color: #F4A261;
+    color: #fff;
+    background-color: #2c2c2c;
     }
     &--cleaned {
-      background-color: #44FCE7;
+      background-color: rgba($color: #2060f6, $alpha: .5);
     }
   }
 }

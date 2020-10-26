@@ -25,6 +25,8 @@ export default {
 
 <style lang="scss">
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s ease-in-out;
 }
@@ -37,7 +39,7 @@ body {
 }
 html {
   color: #264653;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 </style>

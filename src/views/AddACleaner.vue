@@ -14,7 +14,7 @@
         </p>
         <select v-model="selected" class="form__item form__item--select">
           <option selected value="">
-            Виберати тут :)
+            Вибирати тут :)
           </option>
           <option v-for="cleaner in allCleaners" :value="cleaner.id" :key="cleaner.id">
             {{ cleaner.name }}
