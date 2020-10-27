@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <transition name="fade">
+    <transition name="fade" mode="out-in">
       <router-view />
     </transition>
   </div>
@@ -30,7 +30,7 @@ export default {
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s ease-in-out;
 }
-.fade-enter, .fade-leave-active {
+.fade-enter, .fade-leave-to {
   opacity: 0;
 }
 
